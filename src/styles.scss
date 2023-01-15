@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('./config-scss/reset.scss');
+
+html{
+  font-family:'Press Start 2P', cursive;
+  background-color: rgb(97, 121, 202);
+}
+main {
+  max-width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
