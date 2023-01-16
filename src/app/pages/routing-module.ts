@@ -11,7 +11,7 @@ const routes: Routes = [
   component: HomeComponent
 },
 {
-  path:'pokemonDetails',
+  path:'details/:id',
   component: CardPokemonDetailsComponent
 }
 ];

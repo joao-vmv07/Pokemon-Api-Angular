@@ -1,53 +1,67 @@
-:host{
-  display: flex;
-  justify-content: space-between;
-  .pokemon{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    height: 67px;
-    position: relative;
-    margin-top: 20px;
-    border: solid;
-    justify-content: space-between;
-  }
+:host {
+  .listagem {
 
-  .pokemon-status{
-    h2{
-      font-size: 10px;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-    ul{
-      margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .pokemon {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      height: 67px;
+      position: relative;
+      margin-top: 20px;
+      border: solid;
+      justify-content: space-between;
+      text-decoration: none;
+      color: black;
     }
-    li{
-      background-color: rgb(221, 218, 218);
-      font-size: 8px;
+
+    .pokemon-status {
+      h2 {
+        font-size: 10px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+      }
+
+      ul {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      li {
+        background-color: rgb(221, 218, 218);
+        font-size: 9px;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        width: auto;
+        margin-bottom: 10px;
+        border-radius: 4px;
+      }
+    }
+
+    .pokemon-image {
       display: flex;
-      justify-content: left;
-      align-items: left;
-      width: 70%;
-      margin-bottom: 10px;
+      align-items: center;
+      justify-content: right;
+      position: absolute;
+      right: 50px;
+      bottom: 50px;
+      height: 60px;
+      width: 90px;
     }
-  }
-  .pokemon-image{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    position: absolute;
-    right: 10px;
-    bottom: 50px;
-    height: 60px;
-    width: 90px;
-  }
-  img{
-    margin-top: 50px;
-    width: 50px;
+
+    img {
+      margin-top: 50px;
+      width: 75px;
+    }
   }
 }

@@ -11,8 +11,6 @@ import { CardPokemonDetailsComponent } from './card-pokemon-details/card-pokemon
 //Routing
 import { RoutingModule } from './routing-module';
 
-//Componente
-import { PokeSearchComponent } from '../shared/poke-search/poke-search.component';
 
 
 @NgModule({
@@ -23,7 +21,7 @@ import { PokeSearchComponent } from '../shared/poke-search/poke-search.component
     imports: [
         CommonModule,
         RoutingModule,
-        SharedModule
+        SharedModule,
     ]
 })
 export class PagesModule { }
