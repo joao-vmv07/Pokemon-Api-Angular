@@ -1,1 +1,14 @@
-<p>card-pokemon-details works!</p>
+<poker-header></poker-header>
+<main class="card" *ngIf="pokemonDetalhes">
+  <section class="card-detalhes" >
+    <img [src]="pokemonDetalhes.sprites.other.home.front_default" alt="{{pokemonDetalhes.name}}">
+    <h2>Detalhes</h2>
+    <ul>
+      <li *ngFor="let value of pokemonDetalhes.stats">
+        {{value.stat.name}}: {{value.base_stat}}
+      </li>
+    </ul>
+    <button [routerLink]="''" class="btn-detalhes">Voltar</button>
+  </section>
+   <p>{{pokemonDetalhes.name}}</p>
+</main>

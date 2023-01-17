@@ -11,5 +11,4 @@ export class PokerHeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

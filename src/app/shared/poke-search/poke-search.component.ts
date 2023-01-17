@@ -13,7 +13,7 @@ public valueSearch: EventEmitter<string> = new EventEmitter();
   ngOnInit(): void {
   }
 
-  public search(value: string){
+  public search(value: any){
     this.valueSearch.emit(value);
   }
 }

@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 //Module
 import { SharedModule } from "../shared/shared.module";
 
 //Pages
-import { HomeComponent } from './home/home.component';
 import { CardPokemonDetailsComponent } from './card-pokemon-details/card-pokemon-details.component';
+import { HomeComponent } from './home/home.component';
 
 //Routing
 import { RoutingModule } from './routing-module';
