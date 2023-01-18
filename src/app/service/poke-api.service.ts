@@ -25,8 +25,8 @@ export class PokeApiService {
     return this.http.get<any>(url).pipe()
   }
 
-  public apiGetPokemonsById(id: string): Observable<any> {
+  public apiGetPokemonById(id: string): Observable<any> {
     return this.http.get<any>(`${this.urlById}${id}`).pipe()
-    }
   }
+}
 

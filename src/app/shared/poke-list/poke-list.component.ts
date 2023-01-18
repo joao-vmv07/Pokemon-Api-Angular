@@ -29,7 +29,6 @@ export class PokeListComponent implements OnInit {
     const filter = this.pokemonsApi.filter((pokemon: any) => {
       return !pokemon.name.indexOf(valorDePesquisa.toLocaleLowerCase());
     });
-    debugger
     this.pokemonsListagem = filter;
   }
 }
