@@ -1,7 +1,7 @@
 <poke-search (valueSearch)="getSearch($event)"></poke-search>
 <section class="listagem">
-<ng-template ngFor let-pokemon [ngForOf]="pokemonsListagem">
-  <a [routerLink]="['details', pokemon.info.id]" class="pokemon" *ngIf="pokemon.info">
+<ng-template ngFor let-pokemon [ngForOf]="pokemonsListagem" *ngIf="pokemonsListagem">
+  <a [routerLink]="['details', pokemon.info.id]" class="pokemon" >
     <section class="pokemon-card">
       <h2>
         {{pokemon.name}}
@@ -17,4 +17,5 @@
     </section>
   </a>
 </ng-template>
+<button class="btn-proximo" (click)="proximaListagemPokemons()">Proximo</button>
 </section>

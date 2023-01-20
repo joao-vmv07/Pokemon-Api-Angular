@@ -7,12 +7,12 @@ import { Observable, tap } from 'rxjs';
 })
 
 export class PokeApiService {
-  private urlAllPokemons: string = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100';
-  private urlById: string = 'https://pokeapi.co/api/v2/pokemon/';
+  private urlAllPokemons: string = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=5';
+  private urlGetPokemon: string = 'https://pokeapi.co/api/v2/pokemon/';
   constructor(private http: HttpClient) { }
 
-  public getApiListAllPokemons(): Observable<any> {
-    return this.http.get<any>(this.urlAllPokemons).pipe(
+  public getApiListAllPokemons(url?: string): Observable<any> {
+    return this.http.get<any>(url || this.urlAllPokemons).pipe(
       tap(resPokemons => {
         resPokemons.results.map((resPokemon: any) => {
           this.apiGetPokemonsByUrl(resPokemon.url).subscribe(res => resPokemon.info = res);
@@ -26,7 +26,6 @@ export class PokeApiService {
   }
 
   public apiGetPokemonById(id: string): Observable<any> {
-    return this.http.get<any>(`${this.urlById}${id}`).pipe()
+    return this.http.get<any>(`${this.urlGetPokemon}${id}`).pipe()
   }
 }
-

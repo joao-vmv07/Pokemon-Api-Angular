@@ -2,10 +2,12 @@
   header{
     display: flex;
     justify-content: center;
+    position: static;
     align-items: center;
-    padding: 40px 0px;
+    padding: 10px 10px;
     padding-bottom: 10px;
   }
+
   img{
     width: 200px ;
   }

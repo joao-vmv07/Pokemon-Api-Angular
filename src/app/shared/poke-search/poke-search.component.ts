@@ -5,15 +5,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./poke-search.component.scss']
 })
 export class PokeSearchComponent implements OnInit {
-@Output()
-public valueSearch: EventEmitter<string> = new EventEmitter();
+  @Output()
+  public valueSearch: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public search(value: any){
+  public search(value: any) {
     this.valueSearch.emit(value);
   }
 }
