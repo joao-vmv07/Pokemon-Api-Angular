@@ -1,7 +1,7 @@
 <poke-search (valueSearch)="getSearch($event)"></poke-search>
 <section class="listagem">
-<ng-template ngFor let-pokemon [ngForOf]="pokemonsListagem" *ngIf="pokemonsListagem">
-  <a [routerLink]="['details', pokemon.info.id]" class="pokemon" >
+<ng-template ngFor let-pokemon [ngForOf]="pokemonsListagem"  >
+  <a *ngIf="pokemon?.info?.id" [routerLink]="['details', pokemon.info.id]" class="pokemon" >
     <section class="pokemon-card">
       <h2>
         {{pokemon.name}}

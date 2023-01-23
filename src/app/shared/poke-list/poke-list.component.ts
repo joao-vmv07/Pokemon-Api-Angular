@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs';
 import { PokeApiService } from 'src/app/service/poke-api.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
 })
 export class PokeListComponent implements OnInit {
 
-  private pokemonsApi: any;
-  public pokemonsListagem: any;
+  private pokemonsApi!: any[];
+  public pokemonsListagem!: any[];
   public urlProximaListagem!: string;
   constructor(private pokeApiService: PokeApiService) { }
 
@@ -29,10 +29,11 @@ export class PokeListComponent implements OnInit {
   }
 
   public getSearch(valorDePesquisa: string) {
-    const filter = this.pokemonsApi.filter((pokemon: any) => {
-      return !pokemon.name.indexOf(valorDePesquisa.toLocaleLowerCase());
-    });
-    this.pokemonsListagem = filter;
+    this.pokeApiService.apiGetPokemonByName(valorDePesquisa.toLocaleLowerCase()).subscribe(pokemon =>{
+      this.pokemonsApi.unshift({info: pokemon, name: pokemon.name})
+      this.pokemonsApi.pop()
+      this.pokemonsListagem = this.pokemonsApi;
+    })
   }
 
   public proximaListagemPokemons() {
